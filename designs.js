@@ -1,3 +1,4 @@
+var color = '#000';
 // when size is submitted grid is formed
 $('#sizePicker').submit(function(event){
 	event.preventDefault();
@@ -13,3 +14,11 @@ $('#sizePicker').submit(function(event){
 		}
 	}
 });
+
+// change head color based on picker
+$('#colorPicker').change(function(){
+	color = $(this).val();
+	$('.headText').css('color', color);
+});
+
+// event delegation
